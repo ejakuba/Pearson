@@ -1,0 +1,212 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+- Font weights:
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights:
+Default: 1
+Small: 1.05
+Medium: 1.2
+Large: 1.8
+Paragraph default: 1.6
+
+- Letter spacing: 
+-0.5px
+0.75px
+
+--- 02 COLORS
+
+- Primary: #0C352C
+
+- Tints: 
+#125042
+#186A58
+#1E846D
+#869a96
+#ced7d5
+
+- Shades: 
+#0B322A
+#0B2E27
+#0A2A23
+- Accents: 
+
+- Greys: 
+
+--- 05 SHADOWS
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+--- 06 BORDER-RADIUS
+
+Default: 9px
+Medium: 11px
+
+--- 07 WHITESPACE
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Baskervville */
+  font-family: "Roboto Flex", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  /* color: #555; */
+  /* Only works if there is nothing absolutely
+   positioned in relation to body*/
+  overflow-x: hidden;
+  /* scroll-behavior: smooth; */
+}
+/* ********************************************* */
+/* GENERAL REUSABLE COMPONENTS */
+/* ********************************************* */
+
+.container {
+  max-width: 130rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+
+/* .grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+} */
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* .grid--testimonial > testimonial-img {
+  min-height: 10vh;
+  max-height: 10vh;
+} */
+
+.small-gap {
+  gap: 2.4rem;
+}
+/* HELPER/SETTINGS CLASSES */
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.heading-primary {
+  font-size: 7.4rem;
+  letter-spacing: -1.2px;
+  font-weight: 500;
+}
+.heading-primary-serif {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 6.2rem;
+  font-weight: 200;
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.heading-secondary {
+  font-size: 3.6rem;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-bottom: 6.4rem;
+}
+
+.btn-custom {
+  display: inline-block;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: 400;
+  color: #85faa1;
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  text-align: center;
+
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-custom:link,
+.btn-custom:visited {
+  background-color: #0c352c;
+}
+
+.btn-custom:hover,
+.btn-custom:active {
+  color: #fff;
+}
+
+.image-wrapper {
+  width: 100%;
+  display: flex;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.img-50 {
+  align-items: center;
+  justify-content: center;
+}
+
+.image--100-height {
+  max-height: 100%;
+  min-height: 50%;
+}
+
+.image--50-height {
+  max-height: 50%;
+  min-height: 50%;
+}
