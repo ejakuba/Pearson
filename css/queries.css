@@ -349,6 +349,17 @@ queries! Instead, 1rem = 1em = 16px */
   .heading-secondary {
     font-size: 3rem;
   }
+
+  .statistic {
+    align-items: flex-start;
+  }
+
+  .statistic-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .statistic-title {
     font-size: 4.4rem;
   }
